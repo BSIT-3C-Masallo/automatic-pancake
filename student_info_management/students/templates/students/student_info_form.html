@@ -39,16 +39,26 @@
 
             <div class="flex justify-between mt-6">
                 {% if form.instance.pk %}
-                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow">
-                        Update Student
-                    </button>
+                    <div class="flex gap-3">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow">
+                            Update Student
+                        </button>
+                        <a href="{% url 'student_list' %}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-md shadow">
+                            Cancel
+                        </a>
+                    </div>
                 {% else %}
+                <div class="flex gap-3">
                     <button type="submit" name="predict" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-md shadow">
                         Suggest Course
                     </button>
                     <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow">
                         Submit
                     </button>
+                    <a href="{% url 'student_list' %}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-md shadow">
+                        Cancel
+                    </a>
+                </div>
                 {% endif %}
             </div>
         </form>

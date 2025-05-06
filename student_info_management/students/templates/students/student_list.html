@@ -8,6 +8,13 @@
 <body class="bg-gray-100 py-10">
     <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
         <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Student List</h1>
+        
+        <div class="text-right mb-4">
+            <a href="{% url 'student_create' %}" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md shadow">
+                + New Student
+            </a>
+        </div>
+        
         <table class="w-full table-auto">
             <thead>
                 <tr class="text-left">
