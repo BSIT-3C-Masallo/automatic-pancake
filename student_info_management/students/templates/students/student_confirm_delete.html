@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Deletion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-10">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Confirm Deletion</h1>
+        <p class="text-gray-600 mb-4">Are you sure you want to delete the student <strong>{{ student.name }}</strong>?</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-md">Delete</button>
+        </form>
+        <a href="{% url 'student_list' %}" class="mt-4 inline-block bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700">Cancel</a>
+    </div>
+</body>
+</html>
